@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Shanib Khan</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="cursor-glow"></div>
+  <div class="cursor-dot"></div>
+  <canvas id="particles-canvas"></canvas>
+  <div class="geo-shape geo-cube"></div>
+  <div class="geo-shape geo-triangle"></div>
+  <div class="geo-shape geo-circle"></div>
+  <div class="geo-shape geo-diamond"></div>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><i class="fas fa-chart-line"></i><span>Shanib</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button class="dark-mode-toggle" id="darkModeToggle"><i class="fas fa-moon"></i></button></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="line"></span><span class="line"></span><span class="line"></span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="section-title reveal">My <span>Projects</span></h1>
+        <p class="section-subtitle reveal">Showcasing data analysis, web development, and machine learning work</p>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="container">
+        
+        <!-- Project Filter Buttons -->
+        <div class="project-filter reveal">
+          <button class="filter-btn active" data-filter="all">
+            <i class="fas fa-th"></i> All Projects
+          </button>
+          <button class="filter-btn" data-filter="data-analyst">
+            <i class="fas fa-chart-line"></i> Data Analyst
+          </button>
+          <button class="filter-btn" data-filter="web-dev">
+            <i class="fas fa-code"></i> Web Dev
+          </button>
+          <button class="filter-btn" data-filter="python">
+            <i class="fab fa-python"></i> Python
+          </button>
+          <button class="filter-btn" data-filter="machine-learning">
+            <i class="fas fa-brain"></i> Machine Learning
+          </button>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="project-grid stagger-children reveal">
+
+          <!-- ============ DATA ANALYST PROJECTS ============ -->
+
+          <!-- Project: SPL -->
+          <div class="project-card" data-category="data-analyst python">
+            <div class="project-card-inner">
+              <div class="project-image-wrapper">
+                <div class="project-image-placeholder" style="background: linear-gradient(135deg,#0d1a2e,#1a2e4a);">
+                  <i class="fas fa-database"></i>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>SPL - Data Analysis Project</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Data Analysis</span>
+                  <span class="project-tag">Pandas</span>
+                </div>
+                <p>A comprehensive data analysis project focused on extracting meaningful insights from structured datasets. Includes data cleaning, transformation, and statistical analysis.</p>
+                <div class="project-links">
+                  <a href="https://github.com/shanib-techie/spl" target="_blank"><i class="fab fa-github"></i> Code</a>
+                  <a href="https://drive.google.com/file/d/10y5uj7YoYB7-PElPiD3N94hUS4A0Gz0U/view?usp=drive_link" target="_blank"><i class="fas fa-folder"></i> Drive</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: EID -->
+          <div class="project-card" data-category="data-analyst python">
+            <div class="project-card-inner">
+              <div class="project-image-wrapper">
+                <div class="project-image-placeholder" style="background: linear-gradient(135deg,#1a2e1a,#2a3a2a);">
+                  <i class="fas fa-calendar-check"></i>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>EID - Event Analytics</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Data Analysis</span>
+                  <span class="project-tag">Visualization</span>
+                </div>
+                <p>Event data analysis project involving time-series data processing and trend identification. Features automated reporting and visual dashboards.</p>
+                <div class="project-links">
+                  <a href="https://github.com/shanib-techie/EID" target="_blank"><i class="fab fa-github"></i> Code</a>
+                  <a href="https://drive.google.com/file/d/1GFTvRkV_LB8kVMIXIiwrF6-K8Z_r7Y6B/view?usp=drive_link" target="_blank"><i class="fas fa-folder"></i> Drive</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Power BI Dashboard -->
+          <div class="project-card" data-category="data-analyst">
+            <div class="project-card-inner">
+              <div class="project-image-wrapper">
+                <div class="project-image-placeholder" style="background: linear-gradient(135deg,#1a1a2e,#2a2a4a);">
+                  <i class="fas fa-chart-pie"></i>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>Power BI Interactive Dashboards</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Power BI</span>
+                  <span class="project-tag">DAX</span>
+                  <span class="project-tag">Data Visualization</span>
+                </div>
+                <p>Comprehensive Power BI reports featuring interactive dashboards, KPIs, drill-through filters, and dynamic slicers for self-service analytics. Includes retail, sales, and customer segmentation dashboards.</p>
+                <div class="project-links">
+                  <a href="https://github.com/shanib-techie/power-bi" target="_blank"><i class="fab fa-github"></i> Code</a>
+                  <a href="https://drive.google.com/file/d/1pGm9jBU86FxtlPgI_625SXIleOoMe9vm/view" target="_blank"><i class="fas fa-folder"></i> Drive</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Retail Store Transaction -->
+          <div class="project-card" data-category="data-analyst">
+            <div class="project-card-inner">
+              <div class="project-image-wrapper">
+                <div class="project-image-placeholder" style="background: linear-gradient(135deg,#2e1a1a,#3a2a2a);">
+                  <i class="fas fa-chart-bar"></i>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>Retail Store Transaction Deep Insight</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Pandas</span>
+                  <span class="project-tag">Power BI</span>
+                  <span class="project-tag">Matplotlib</span>
+                </div>
+                <p>Analyzed retail transactions using Pandas & Matplotlib to uncover revenue trends across categories. Built an interactive Power BI dashboard with 5+ KPIs: monthly sales trends, category breakdown, and customer retention.</p>
+                <div class="project-links">
+                  <a href="" target="_blank"><i class="fab fa-github"></i> Code</a>
+                  <a href="https://drive.google.com/file/d/174KZV1VH6YCdeE0gUxGbn66qJyD1UxI_/view?usp=drive_link" target="_blank"><i class="fas fa-folder"></i> Drive</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Sales Performance Dashboard -->
+          <div class="project-card" data-category="data-analyst">
+            <div class="project-card-inner">
+              <div class="project-image-wrapper">
+                <div class="project-image-placeholder" style="background: linear-gradient(135deg,#0d2e1a,#1a3a2a);">
+                  <i class="fas fa-funnel-dollar"></i>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>Sales Performance & Forecast Dashboard</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Power BI</span>
+                  <span class="project-tag">Scikit-learn</span>
+                </div>
+                <p>End-to-end analytics project on 792 transactions: cleaning, transformation, and Power BI dashboard with KPIs (Revenue, Win Rate, Deal Size). Implemented Linear Regression forecasting to predict sales for the next 2 quarters.</p>
+                <div class="project-links">
+                  <a href="https://github.com/shanib-techie/power-bi/tree/main/sale_performance_analytic_assignment2" target="_blank"><i class="fab fa-github"></i> Code</a>
+                  <a href="https://drive.google.com/file/d/16LlcVY94eiuK9dwBfWQChwH4OCs3W955/view?usp=drive_link" target="_blank"><i class="fas fa-folder"></i> Drive</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Mall Customer Segmentation -->
+          <div class="project-card" data-category="data-analyst">
+            <div class="project-card-inner">
+              <div class="project-image-wrapper">
+                <div class="project-image-placeholder" style="background: linear-gradient(135deg,#2e1a2e,#3a2a3a);">
+                  <i class="fas fa-users"></i>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>Mall Customer Segmentation & Behavior Analysis</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Power BI</span>
+                  <span class="project-tag">DAX</span>
+                </div>
+                <p>Designed Power BI dashboard analyzing spending patterns by age, income, and gender. Segmented customers into high-value, mid-range, and low-spend groups using visual clustering, enabling targeted marketing.</p>
+                <div class="project-links">
+                  <a href="https://github.com/shanib-techie/power-bi/tree/main/MALL_CUSTOMER_DATA_analysis" target="_blank"><i class="fab fa-github"></i> Code</a>
+                  <a href="https://drive.google.com/file/d/1Ma-HX8-iLlYRZlKOApPiHDN9o55SpSyL/view?usp=drive_link" target="_blank"><i class="fas fa-folder"></i> Drive</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Trader Sentiment Analysis -->
+          <div class="project-card" data-category="data-analyst machine-learning python">
+            <div class="project-card-inner">
+              <div class="project-image-wrapper">
+                <div class="project-image-placeholder" style="background: linear-gradient(135deg,#1a2e3a,#2a4a5a);">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>Trader Sentiment Analysis</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">NLP</span>
+                  <span class="project-tag">Sentiment Analysis</span>
+                </div>
+                <p>Analyzing trader sentiment from financial data and social media. NLP-based approach to extract market sentiment indicators for better trading decisions.</p>
+                <div class="project-links">
+                  <a href="https://github.com/shanib-techie/trader-sentiment-analysis" target="_blank"><i class="fab fa-github"></i> Code</a>
+                  <a href="https://drive.google.com/file/d/1bR89rOlWOTb7fFNkQsX5lsrGFgATucJW/view?usp=drive_link" target="_blank"><i class="fas fa-folder"></i> Drive</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============ WEB DEVELOPMENT PROJECTS ============ -->
+
+          <!-- Project: Maaz Design - Web Development -->
+          <div class="project-card" data-category="web-dev">
+            <div class="project-card-inner">
+              <div class="project-image-wrapper">
+                <div class="project-image-placeholder" style="background: linear-gradient(135deg,#1a2a3a,#2a4a5a);">
+                  <i class="fas fa-palette"></i>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>Maaz Design - Creative Portfolio</h3>
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">Responsive</span>
+                </div>
+                <p>A creative and modern portfolio website design featuring stunning visual elements, smooth animations, and a fully responsive layout for all devices.</p>
+                <div class="project-links">
+                  <a href="https://github.com/shanib-techie" target="_blank"><i class="fab fa-github"></i> Code</a>
+                  <a href="https://maazdesign.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Apke Liye Mohtarma - Interactive Website -->
+          <div class="project-card" data-category="web-dev">
+            <div class="project-card-inner">
+              <div class="project-image-wrapper">
+                <div class="project-image-placeholder" style="background: linear-gradient(135deg,#3a1a2e,#4a2a3a);">
+                  <i class="fas fa-heart"></i>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>Apke Liye Mohtarma - Special Project</h3>
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">Animations</span>
+                </div>
+                <p>A beautifully designed interactive website with romantic theme, featuring elegant animations, Valentine's special effects, and a memorable user experience.</p>
+                <div class="project-links">
+                  <a href="https://github.com/shanib-techie/happy-propose-day" target="_blank"><i class="fab fa-github"></i> Code</a>
+                  <a href="https://apke-liye-mohtarma.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Shanib EID Project -->
+          <div class="project-card" data-category="web-dev">
+            <div class="project-card-inner">
+              <div class="project-image-wrapper">
+                <div class="project-image-placeholder" style="background: linear-gradient(135deg,#2a3a1a,#4a5a2a);">
+                  <i class="fas fa-moon"></i>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>EID Celebration - Festive Website</h3>
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">Festive</span>
+                </div>
+                <p>A celebratory EID festival website featuring festive design elements, Islamic art patterns, beautiful color schemes, and interactive greetings for the occasion.</p>
+                <div class="project-links">
+                  <a href="https://github.com/shanib-techie/shanib-eid-project" target="_blank"><i class="fab fa-github"></i> Code</a>
+                  <a href="https://shanib-eid-project.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Happy Propose Day -->
+          <div class="project-card" data-category="web-dev">
+            <div class="project-card-inner">
+              <div class="project-image-wrapper">
+                <div class="project-image-placeholder" style="background: linear-gradient(135deg,#4a1a3a,#5a2a4a);">
+                  <i class="fas fa-heartbeat"></i>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>Happy Propose Day - Interactive Web Page</h3>
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">Animations</span>
+                </div>
+                <p>An interactive and visually appealing web page designed for Propose Day celebrations. Features smooth animations, responsive design, and engaging user interactions.</p>
+                <div class="project-links">
+                  <a href="https://github.com/shanib-techie/happy-propose-day" target="_blank"><i class="fab fa-github"></i> Code</a>
+                  <a href="https://apke-liye-mohtarma.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Personal Portfolio Website -->
+          <div class="project-card" data-category="web-dev">
+            <div class="project-card-inner">
+              <div class="project-image-wrapper">
+                <div class="project-image-placeholder" style="background: linear-gradient(135deg,#3a3a1a,#4a4a2a);">
+                  <i class="fas fa-user-tie"></i>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>Personal Portfolio Website</h3>
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">Responsive</span>
+                </div>
+                <p>A fully responsive personal portfolio website showcasing projects, skills, and experience. Features particle animations, dark mode toggle, and modern UI/UX design.</p>
+                <div class="project-links">
+                  <a href="https://github.com/shanib-techie/shanib-khan-portfolio_static" target="_blank"><i class="fab fa-github"></i> Code</a>
+                 <a href="https://shanib-khan-static.netlify.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============ PYTHON PROJECTS ============ -->
+
+          <!-- Project: Voting System Database Application -->
+          <div class="project-card" data-category="python">
+            <div class="project-card-inner">
+              <div class="project-image-wrapper">
+                <div class="project-image-placeholder" style="background: linear-gradient(135deg,#1a2e4a,#2a3a5a);">
+                  <i class="fas fa-vote-yea"></i>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>Voting System Database Application</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">MySQL</span>
+                  <span class="project-tag">Database</span>
+                  <span class="project-tag">CRUD</span>
+                </div>
+                <p>Designed and developed a database-driven voting system using Python and MySQL with full CRUD functionality. Created a normalized relational schema managing voter registration, candidate, and election result data. Implemented backend logic ensuring data integrity and preventing duplicate vote entries.</p>
+                <div class="project-links">
+                  <a href="https://github.com/shanib-techie/power-bi/tree/main/python%2Bmysql_practice" target="_blank"><i class="fab fa-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Dataset Generator Tool -->
+          <div class="project-card" data-category="python">
+            <div class="project-card-inner">
+              <div class="project-image-wrapper">
+                <div class="project-image-placeholder" style="background: linear-gradient(135deg,#1a1a3a,#2a2a4a);">
+                  <i class="fas fa-cogs"></i>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>Dataset Generator Tool</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Pandas</span>
+                  <span class="project-tag">CLI</span>
+                </div>
+                <p>CLI-based tool generating custom structured datasets with user-defined schema, exported to Excel and JSON formats. Implemented support for user-defined columns including categorical data and integer ranges.</p>
+                <div class="project-links">
+                  <a href="https://github.com/shanib-techie/dataset_generator" target="_blank"><i class="fab fa-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============ MACHINE LEARNING PROJECTS ============ -->
+
+          <!-- Project: Machine Learning Repository -->
+          <div class="project-card" data-category="machine-learning python">
+            <div class="project-card-inner">
+              <div class="project-image-wrapper">
+                <div class="project-image-placeholder" style="background: linear-gradient(135deg,#2a3a1a,#3a4a2a);">
+                  <i class="fas fa-brain"></i>
+                </div>
+              </div>
+              <div class="project-info">
+                <h3>Machine Learning Projects Repository</h3>
+                <div class="project-tags">
+                  <span class="project-tag">Python</span>
+                  <span class="project-tag">Jupyter Notebook</span>
+                  <span class="project-tag">Scikit-learn</span>
+                  <span class="project-tag">TensorFlow</span>
+                </div>
+                <p>A comprehensive collection of machine learning projects including supervised and unsupervised learning algorithms, neural networks, and real-world data applications. Features notebooks for regression, classification, and clustering tasks.</p>
+                <div class="project-links">
+                  <a href="https://github.com/shanib-techie/MachineLearning" target="_blank"><i class="fab fa-github"></i> Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- GitHub Profile Link -->
+        <div class="github-profile-link reveal">
+          <a href="https://github.com/shanib-techie" target="_blank" class="cta-button">
+            <i class="fab fa-github"></i> View All Projects on GitHub
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="index.html" class="logo"><i class="fas fa-chart-line"></i><span>Shanib</span></a>
+        <ul class="footer-links">
+          <li><a href="https://github.com/shanib-techie" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/shanib-khan-515a8a316/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="mailto:shanibkhan622@gmail.com"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+      </div>
+      <p class="footer-copy">&copy; 2026 Shanib Khan. Built with data, analytics, and precision.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

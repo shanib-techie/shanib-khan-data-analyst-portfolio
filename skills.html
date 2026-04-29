@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills — Shanib Khan</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="cursor-glow"></div>
+  <div class="cursor-dot"></div>
+  <canvas id="particles-canvas"></canvas>
+  <div class="geo-shape geo-cube"></div>
+  <div class="geo-shape geo-triangle"></div>
+  <div class="geo-shape geo-circle"></div>
+  <div class="geo-shape geo-diamond"></div>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><i class="fas fa-chart-line"></i><span>Shanib</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html" class="active">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button class="dark-mode-toggle" id="darkModeToggle"><i class="fas fa-moon"></i></button></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="line"></span><span class="line"></span><span class="line"></span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="section-title reveal">My <span>Skills</span></h1>
+        <p class="section-subtitle reveal">Tools and technologies I use for data analysis and visualization</p>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <div class="container">
+        <div class="skill-grid stagger-children reveal">
+
+          <!-- Programming & Analysis -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon frontend"><i class="fas fa-chart-line"></i></div>
+              <h3>Programming & Data Analysis</h3>
+            </div>
+            <div class="skill-item">
+              <h4><span>Python</span><span>85%</span></h4>
+              <div class="skill-bar"><div class="skill-progress frontend-bar" style="width:85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <h4><span>Pandas</span><span>80%</span></h4>
+              <div class="skill-bar"><div class="skill-progress frontend-bar" style="width:80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <h4><span>NumPy</span><span>75%</span></h4>
+              <div class="skill-bar"><div class="skill-progress frontend-bar" style="width:75%"></div></div>
+            </div>
+            <div class="skill-item">
+              <h4><span>Matplotlib / Seaborn</span><span>75%</span></h4>
+              <div class="skill-bar"><div class="skill-progress frontend-bar" style="width:75%"></div></div>
+            </div>
+            <div class="skill-item">
+              <h4><span>Scikit-learn</span><span>70%</span></h4>
+              <div class="skill-bar"><div class="skill-progress frontend-bar" style="width:70%"></div></div>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon backend"><i class="fas fa-database"></i></div>
+              <h3>Database & Querying</h3>
+            </div>
+            <div class="skill-item">
+              <h4><span>MySQL</span><span>85%</span></h4>
+              <div class="skill-bar"><div class="skill-progress backend-bar" style="width:85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <h4><span>SQL (Joins, Aggregations)</span><span>80%</span></h4>
+              <div class="skill-bar"><div class="skill-progress backend-bar" style="width:80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <h4><span>Data Cleaning</span><span>80%</span></h4>
+              <div class="skill-bar"><div class="skill-progress backend-bar" style="width:80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <h4><span>Data Modeling Basics</span><span>70%</span></h4>
+              <div class="skill-bar"><div class="skill-progress backend-bar" style="width:70%"></div></div>
+            </div>
+          </div>
+
+          <!-- Visualization & Tools -->
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon tools"><i class="fas fa-chart-pie"></i></div>
+              <h3>Visualization & Tools</h3>
+            </div>
+            <div class="skill-item">
+              <h4><span>Power BI</span><span>85%</span></h4>
+              <div class="skill-bar"><div class="skill-progress tools-bar" style="width:85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <h4><span>Excel (Pivot Tables, VLOOKUP)</span><span>90%</span></h4>
+              <div class="skill-bar"><div class="skill-progress tools-bar" style="width:90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <h4><span>Data Visualization</span><span>85%</span></h4>
+              <div class="skill-bar"><div class="skill-progress tools-bar" style="width:85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <h4><span>Reporting & Insights</span><span>80%</span></h4>
+              <div class="skill-bar"><div class="skill-progress tools-bar" style="width:80%"></div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Areas of Interest -->
+    <section class="certs" style="background: var(--bg);">
+      <div class="container">
+        <h2 class="section-title reveal">Areas of <span>Interest</span></h2>
+        <p class="section-subtitle reveal">What I'm passionate about</p>
+        <div class="cert-grid stagger-children reveal">
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fas fa-search"></i></div>
+            <div><h4>Data Analytics</h4><p>Extracting insights from raw data</p></div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fas fa-brain"></i></div>
+            <div><h4>Entry-Level Data Science</h4><p>ML fundamentals and statistical modeling</p></div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fab fa-python"></i></div>
+            <div><h4>Python for Data Analysis</h4><p>Pandas, NumPy, and visualization libraries</p></div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon"><i class="fas fa-server"></i></div>
+            <div><h4>Database Design</h4><p>Schema design and query optimization</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="index.html" class="logo"><i class="fas fa-chart-line"></i><span>Shanib</span></a>
+        <ul class="footer-links">
+          <li><a href="https://github.com/shanib-techie" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/shanib-khan-515a8a316/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="mailto:shanibkhan622@gmail.com"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+      </div>
+      <p class="footer-copy">&copy; 2026 Shanib Khan. Built with data, analytics, and precision.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

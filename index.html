@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shanib Khan — Data Analyst specializing in MySQL, Power BI, Python, and data visualization.">
+  <title>Home — Shanib Khan</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-glow"></div>
+  <div class="cursor-dot"></div>
+
+  <!-- Particle Background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Floating Geometric Shapes -->
+  <div class="geo-shape geo-cube"></div>
+  <div class="geo-shape geo-triangle"></div>
+  <div class="geo-shape geo-circle"></div>
+  <div class="geo-shape geo-diamond"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-chart-line"></i>
+        <span>Shanib</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button class="dark-mode-toggle" id="darkModeToggle"><i class="fas fa-moon"></i></button></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="line"></span><span class="line"></span><span class="line"></span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ── HERO ── -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="hero-badge">
+              <span class="pulse-dot"></span>
+              Open to Data Analyst Internship Opportunities
+            </div>
+            <h1>Hi, I'm <span class="gradient-text">Shanib Khan</span><br>
+              <span class="typed-wrapper"><span class="typed-text">Data Analyst</span></span>
+            </h1>
+            <p>I analyze data to uncover meaningful insights and support data-driven decisions. Skilled in Python, MySQL, Power BI, and Excel for data cleaning, visualization, and reporting.</p>
+            <div class="hero-buttons">
+              <a href="projects.html" class="cta-button">
+                <i class="fas fa-chart-line"></i> View My Projects
+              </a>
+              <a href="contact.html" class="cta-button-outline">
+                <i class="fas fa-paper-plane"></i> Contact Me
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-3d-wrapper">
+            <div class="hero-card">
+              <div class="hero-card-content">
+                <div class="hero-card-avatar">
+                  <i class="fas fa-chart-pie"></i>
+                </div>
+                <h3>Shanib Khan</h3>
+                <p class="role">Aspiring Data Analyst</p>
+                <p>Focused on data cleaning, exploratory data analysis (EDA), dashboard creation, and transforming raw data into actionable insights.</p>
+                <div class="hero-card-techs">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">Power BI</span>
+                  <span class="tech-tag">Excel</span>
+                  <span class="tech-tag">Pandas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT SNIPPET ── -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title reveal">About <span>Me</span></h2>
+        <p class="section-subtitle reveal">My journey into analytics and problem-solving</p>
+        <div class="about-content">
+          <div class="about-text reveal-left">
+            <p>Hello! I'm Shanib Khan, an aspiring Data Analyst with practical experience working on structured and unstructured datasets. I specialize in data cleaning, preprocessing, SQL querying, and building interactive dashboards.</p>
+            <p>My interest in analytics developed through studying statistics and working on real datasets using Python and MySQL. I focus on extracting insights that help in better decision-making.</p>
+            <p>I continuously improve my analytical thinking by building projects, exploring new tools, and strengthening my statistical foundation.</p>
+            <br>
+            <a href="about.html" class="cta-button-outline"><i class="fas fa-user"></i> More About Me</a>
+            <a href="https://drive.google.com/uc?export=download&id=1pGm9jBU86FxtlPgI_625SXIleOoMe9vm" class="cta-button-outline" target="_blank"><i class="fas fa-download"></i> Download CV</a>
+          </div>
+
+          <div class="reveal-right">
+            <div class="stats stagger-children">
+              <div class="stat-card">
+                <div class="stat-card-inner">
+                  <div class="stat-card-front">
+                    <div class="stat-number" data-target="1" data-suffix="+">0+</div>
+                    <div class="stat-label">Year Learning Analytics</div>
+                  </div>
+                  <div class="stat-card-back">
+                    <p>Focused on data analysis, visualization, and SQL projects</p>
+                  </div>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card-inner">
+                  <div class="stat-card-front">
+                    <div class="stat-number" data-target="15" data-suffix="+">0+</div>
+                    <div class="stat-label">Projects & Datasets</div>
+                  </div>
+                  <div class="stat-card-back">
+                    <p>Performed EDA, data transformation, and dashboard building</p>
+                  </div>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card-inner">
+                  <div class="stat-card-front">
+                    <div class="stat-number" data-target="5" data-suffix="+">0+</div>
+                    <div class="stat-label">Dashboards Created</div>
+                  </div>
+                  <div class="stat-card-back">
+                    <p>Interactive reports built using Power BI and Excel</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="index.html" class="logo">
+          <i class="fas fa-chart-line"></i>
+          <span>Shanib</span>
+        </a>
+        <ul class="footer-links">
+          <li><a href="https://github.com/shanib-techie" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/shanib-khan-515a8a316/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="mailto:shanibkhan622@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+      </div>
+      <p class="footer-copy">&copy; 2026 Shanib Khan. Built with data, analytics, and precision.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

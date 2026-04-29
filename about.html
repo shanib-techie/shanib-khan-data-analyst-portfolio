@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Shanib Khan</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="cursor-glow"></div>
+  <div class="cursor-dot"></div>
+  <canvas id="particles-canvas"></canvas>
+  <div class="geo-shape geo-cube"></div>
+  <div class="geo-shape geo-triangle"></div>
+  <div class="geo-shape geo-circle"></div>
+  <div class="geo-shape geo-diamond"></div>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><i class="fas fa-chart-line"></i><span>Shanib</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button class="dark-mode-toggle" id="darkModeToggle"><i class="fas fa-moon"></i></button></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="line"></span><span class="line"></span><span class="line"></span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="section-title reveal">About <span>Me</span></h1>
+        <p class="section-subtitle reveal">My journey into data analytics, problem-solving, and continuous learning</p>
+      </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text reveal-left">
+            <p>Hello! I'm Shanib Khan, an aspiring Data Analyst with hands-on experience working on real-world datasets. I specialize in data cleaning, preprocessing, exploratory data analysis (EDA), and building dashboards to extract meaningful insights.</p>
+            <p>My journey into analytics started with a strong interest in statistics and problem-solving. Over time, I developed practical skills in Python, MySQL, Excel, and Power BI to analyze data and present clear, actionable insights.</p>
+            <p>I continuously improve my analytical thinking by working on projects, learning new tools, and exploring how data can support better decision-making.</p>
+
+            <!-- Timeline -->
+            <div class="timeline reveal">
+              <div class="timeline-item">
+                <span class="year">2024 – Present</span>
+                <h4>B.Sc. (Hons) Computer Science</h4>
+                <p>Aryabhatta College, University of Delhi — 1st Year CGPA: 7.0</p>
+              </div>
+              <div class="timeline-item">
+                <span class="year">2024 – Present</span>
+                <h4>Data Analytics Learning & Projects</h4>
+                <p>Working on datasets, performing EDA, building dashboards, and strengthening statistical foundations.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="year">2023 – 2024</span>
+                <h4>12th Class — Commerce with Mathematics</h4>
+                <p>G.B.S.S.S C-Block, Chandanagar — Secured 78%</p>
+              </div>
+              <div class="timeline-item">
+                <span class="year">Ongoing</span>
+                <h4>Continuous Skill Development</h4>
+                <p>Improving knowledge in data visualization, SQL optimization, and analytical problem-solving.</p>
+              </div>
+            </div>
+
+            <!-- CV Download Button -->
+            <div class="cv-section reveal">
+              <a href="https://drive.google.com/uc?export=download&id=1pGm9jBU86FxtlPgI_625SXIleOoMe9vm" class="cta-button" target="_blank">
+                <i class="fas fa-download"></i> Download My CV
+              </a>
+            </div>
+          </div>
+
+          <div class="reveal-right">
+            <div class="stats stagger-children">
+              <div class="stat-card">
+                <div class="stat-card-inner">
+                  <div class="stat-card-front">
+                    <div class="stat-number" data-target="1" data-suffix="+">0+</div>
+                    <div class="stat-label">Year Learning Analytics</div>
+                  </div>
+                  <div class="stat-card-back">
+                    <p>Focused on data analysis, statistics, and visualization projects</p>
+                  </div>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card-inner">
+                  <div class="stat-card-front">
+                    <div class="stat-number" data-target="20" data-suffix="+">0+</div>
+                    <div class="stat-label">Datasets Analyzed</div>
+                  </div>
+                  <div class="stat-card-back">
+                    <p>Performed cleaning, transformation, and insight extraction</p>
+                  </div>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card-inner">
+                  <div class="stat-card-front">
+                    <div class="stat-number" data-target="5" data-suffix="+">0+</div>
+                    <div class="stat-label">Dashboards Built</div>
+                  </div>
+                  <div class="stat-card-back">
+                    <p>Created interactive reports using Power BI and Excel</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Preview -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <h2 class="section-title reveal">My <span>Skills</span></h2>
+        <p class="section-subtitle reveal">Tools and technologies I use for data analysis</p>
+        <div class="skill-grid stagger-children reveal">
+
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon frontend"><i class="fas fa-chart-line"></i></div>
+              <h3>Data Analysis</h3>
+            </div>
+            <div class="skill-item">
+              <h4><span>Python (Pandas, NumPy)</span><span>85%</span></h4>
+              <div class="skill-bar"><div class="skill-progress frontend-bar" style="width:85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <h4><span>Data Cleaning & EDA</span><span>85%</span></h4>
+              <div class="skill-bar"><div class="skill-progress frontend-bar" style="width:85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <h4><span>Matplotlib / Seaborn</span><span>80%</span></h4>
+              <div class="skill-bar"><div class="skill-progress frontend-bar" style="width:80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <h4><span>Scikit-learn</span><span>70%</span></h4>
+              <div class="skill-bar"><div class="skill-progress frontend-bar" style="width:70%"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon backend"><i class="fas fa-database"></i></div>
+              <h3>Database & Querying</h3>
+            </div>
+            <div class="skill-item">
+              <h4><span>MySQL</span><span>85%</span></h4>
+              <div class="skill-bar"><div class="skill-progress backend-bar" style="width:85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <h4><span>SQL Queries & Joins</span><span>85%</span></h4>
+              <div class="skill-bar"><div class="skill-progress backend-bar" style="width:85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <h4><span>Database Design Basics</span><span>75%</span></h4>
+              <div class="skill-bar"><div class="skill-progress backend-bar" style="width:75%"></div></div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-header">
+              <div class="skill-icon tools"><i class="fas fa-chart-pie"></i></div>
+              <h3>Visualization & Reporting</h3>
+            </div>
+            <div class="skill-item">
+              <h4><span>Power BI</span><span>85%</span></h4>
+              <div class="skill-bar"><div class="skill-progress tools-bar" style="width:85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <h4><span>Microsoft Excel</span><span>90%</span></h4>
+              <div class="skill-bar"><div class="skill-progress tools-bar" style="width:90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <h4><span>Dashboard Creation</span><span>80%</span></h4>
+              <div class="skill-bar"><div class="skill-progress tools-bar" style="width:80%"></div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certs">
+      <div class="container">
+        <h2 class="section-title reveal">Certifications</h2>
+        <p class="section-subtitle reveal">Industry-recognized credentials</p>
+        <div class="cert-grid stagger-children reveal">
+          
+          <!-- Certificate 1: Deloitte Data Analytics -->
+          <a href="https://drive.google.com/file/d/1IJUpHRxk4iqYg6QlByEM1owwYtz-3P2t/view?usp=drive_link" target="_blank" class="cert-card cert-link">
+            <div class="cert-icon"><i class="fas fa-award"></i></div>
+            <div>
+              <h4>Deloitte Data Analytics</h4>
+              <p>Virtual Experience Program</p>
+            </div>
+            <i class="fas fa-external-link-alt cert-view-icon"></i>
+          </a>
+
+          <!-- Certificate 2: MS Excel Upskilling -->
+          <a href="https://drive.google.com/file/d/1PyhYeeKLr-QdFySlGSV5ra-wHFZvj5ms/view?usp=drive_link" target="_blank" class="cert-card cert-link">
+            <div class="cert-icon"><i class="fas fa-table"></i></div>
+            <div>
+              <h4>MS Excel Upskilling</h4>
+              <p>Simplilearn Certification</p>
+            </div>
+            <i class="fas fa-external-link-alt cert-view-icon"></i>
+          </a>
+
+          <!-- Certificate 3: Tata Data Visualisation -->
+          <a href="https://drive.google.com/file/d/1Hfg7wth5e6pNMDe7_AEWmWdzjWmxS4aQ/view?usp=drive_link" target="_blank" class="cert-card cert-link">
+            <div class="cert-icon"><i class="fas fa-chart-pie"></i></div>
+            <div>
+              <h4>Tata Data Visualisation</h4>
+              <p>Virtual Experience Program</p>
+            </div>
+            <i class="fas fa-external-link-alt cert-view-icon"></i>
+          </a>
+
+          <!-- Certificate 4: Certificate and Content Writing Internship -->
+          <a href="https://drive.google.com/file/d/1LnUvEPueXhjDKCNolCxnBD5HOckybWew/view?usp=drive_link" target="_blank" class="cert-card cert-link">
+            <div class="cert-icon"><i class="fas fa-pen-fancy"></i></div>
+            <div>
+              <h4>Content Writing Internship</h4>
+              <p>Internship Completion Certificate</p>
+            </div>
+            <i class="fas fa-external-link-alt cert-view-icon"></i>
+          </a>
+
+          <!-- Certificate 5: Tata Data Analytics -->
+          <a href="https://drive.google.com/file/d/1ezwYnypDwt7KoS97dpbClq883Oz2ZkQr/view?usp=drive_link" target="_blank" class="cert-card cert-link">
+            <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+            <div>
+              <h4>Tata Data Analytics</h4>
+              <p>Virtual Experience Program</p>
+            </div>
+            <i class="fas fa-external-link-alt cert-view-icon"></i>
+          </a>
+
+          <!-- Certificate 6: BCG Data Science -->
+          <a href="https://drive.google.com/drive/folders/1dKXII0AVswsuyQ25zjXa6Bq4LYchHZ8L?usp=drive_link" target="_blank" class="cert-card cert-link">
+            <div class="cert-icon"><i class="fas fa-brain"></i></div>
+            <div>
+              <h4>BCG Data Science</h4>
+              <p>Virtual Experience Program</p>
+            </div>
+            <i class="fas fa-external-link-alt cert-view-icon"></i>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="index.html" class="logo"><i class="fas fa-chart-line"></i><span>Shanib</span></a>
+        <ul class="footer-links">
+          <li><a href="https://github.com/shanib-techie" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/shanib-khan-515a8a316/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="mailto:shanibkhan622@gmail.com"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+      </div>
+      <p class="footer-copy">&copy; 2026 Shanib Khan. Built with data, analytics, and precision.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

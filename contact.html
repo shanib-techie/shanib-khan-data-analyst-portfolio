@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Shanib Khan</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="cursor-glow"></div>
+  <div class="cursor-dot"></div>
+  <canvas id="particles-canvas"></canvas>
+  <div class="geo-shape geo-cube"></div>
+  <div class="geo-shape geo-triangle"></div>
+  <div class="geo-shape geo-circle"></div>
+  <div class="geo-shape geo-diamond"></div>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo"><i class="fas fa-chart-line"></i><span>Shanib</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><button class="dark-mode-toggle" id="darkModeToggle"><i class="fas fa-moon"></i></button></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="line"></span><span class="line"></span><span class="line"></span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="section-title reveal">Get In <span>Touch</span></h1>
+        <p class="section-subtitle reveal">Have an opportunity or project in mind? Let's connect.</p>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container">
+        <div class="contact-content">
+
+          <div class="contact-info reveal-left">
+            <h3>Let's Connect!</h3>
+            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <p>shanibkhan622@gmail.com</p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <p>+91 9354 257 451</p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>Delhi, New Delhi, India</p>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-github"></i>
+              <p><a href="https://github.com/shanib-techie" target="_blank" style="color: var(--accent);">github.com/shanib-techie</a></p>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-linkedin-in"></i>
+              <p><a href="https://www.linkedin.com/in/shanib-khan-515a8a316/" target="_blank" style="color: var(--accent);">linkedin.com/in/shanib-khan</a></p>
+            </div>
+          </div>
+
+          <div class="contact-form reveal-right">
+            <form id="contactForm">
+              <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" placeholder="Your Email" required>
+              </div>
+              <div class="form-group">
+                <input type="text" name="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea name="message" placeholder="Your Message" required></textarea>
+              </div>
+              <button type="submit" class="cta-button" style="width:100%; justify-content:center;">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+              <div class="form-success">Thanks for reaching out! I'll get back to you soon. 🎉</div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="index.html" class="logo"><i class="fas fa-chart-line"></i><span>Shanib</span></a>
+        <ul class="footer-links">
+          <li><a href="https://github.com/shanib-techie" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/shanib-khan-515a8a316/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="mailto:shanibkhan622@gmail.com"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+      </div>
+      <p class="footer-copy">&copy; 2026 Shanib Khan. Built with data, analytics, and precision.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
