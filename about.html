@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
@@ -7,6 +8,215 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ═══════════════════════════════════════════════════
+       OVERRIDE STYLES — About Hero Section Redesign
+  ═══════════════════════════════════════════════════ -->
+  <style>
+    /* ── About Hero Block ── */
+    .about-hero-block {
+      display: flex;
+      align-items: flex-start;
+      gap: 48px;
+      padding: 60px 0 40px;
+    }
+
+    /* ── LEFT: Circular Photo ── */
+    .about-photo-wrap {
+      flex: 0 0 auto;
+      position: relative;
+      width: 220px;
+      height: 220px;
+    }
+
+    .about-photo-wrap .photo-ring {
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      background: conic-gradient(
+        #00c6ff 0deg,
+        #0072ff 90deg,
+        #00c6ff 180deg,
+        #0072ff 270deg,
+        #00c6ff 360deg
+      );
+      animation: spin-ring 4s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes spin-ring {
+      to { transform: rotate(360deg); }
+    }
+
+    .about-photo-wrap .photo-ring::after {
+      content: '';
+      position: absolute;
+      inset: 5px;
+      border-radius: 50%;
+      background: #0a0e1a;
+    }
+
+    .about-photo-wrap img {
+      position: relative;
+      z-index: 1;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .about-photo-wrap .photo-placeholder {
+      position: relative;
+      z-index: 1;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0d2137, #1a3a5c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+      color: #00c6ff44;
+    }
+
+    /* ── RIGHT: Stats grid + intro text ── */
+    .about-right-col {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .about-stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .about-stat-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(0,198,255,0.12);
+      border-radius: 16px;
+      padding: 22px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .about-stat-card:hover {
+      border-color: rgba(0,198,255,0.4);
+      transform: translateY(-3px);
+    }
+
+    .about-stat-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(0,198,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 18px;
+      color: #00c6ff;
+    }
+
+    .about-stat-info .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: #00c6ff;
+      line-height: 1;
+      letter-spacing: -0.5px;
+    }
+
+    .about-stat-info .stat-lbl {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 4px;
+      line-height: 1.3;
+    }
+
+    /* ── Intro paragraphs ── */
+    .about-intro-text p {
+      color: rgba(255,255,255,0.75);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .about-intro-text p strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* ── Hide the old about-content layout for just the top portion ── */
+    .about-content-legacy {
+      display: none !important;
+    }
+
+    /* ════════════════════════════════
+       MOBILE RESPONSIVE
+    ════════════════════════════════ */
+    @media (max-width: 768px) {
+      .about-hero-block {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        padding: 32px 0 24px;
+      }
+
+      .about-photo-wrap,
+      .about-photo-wrap img,
+      .about-photo-wrap .photo-placeholder {
+        width: 170px;
+        height: 170px;
+      }
+
+      .about-right-col {
+        width: 100%;
+      }
+
+      .about-stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .about-stat-card {
+        padding: 16px 14px;
+        gap: 12px;
+      }
+
+      .about-stat-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+      }
+
+      .about-stat-info .stat-num {
+        font-size: 1.4rem;
+      }
+
+      .about-stat-info .stat-lbl {
+        font-size: 0.7rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .about-stats-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-stat-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -45,19 +255,77 @@
       </div>
     </section>
 
-    <!-- About Content -->
+    <!-- ══════════════════════════════════════
+         NEW About Hero Block (Image 2 style)
+    ══════════════════════════════════════ -->
     <section class="about">
       <div class="container">
+
+        <div class="about-hero-block">
+
+          <!-- Circular photo -->
+          <div class="about-photo-wrap">
+            <div class="photo-ring"></div>
+            <img
+              src="Screenshot 2026-05-17 214440.png"
+              alt="Shanib Khan"
+              onerror="this.outerHTML='<div class=\'photo-placeholder\'><i class=\'fas fa-user\'></i></div>'"
+            >
+          </div>
+
+          <!-- Stats grid + intro text -->
+          <div class="about-right-col">
+
+            <!-- 2×2 stat cards -->
+            <div class="about-stats-grid">
+
+              <div class="about-stat-card">
+                <div class="about-stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="about-stat-info">
+                  <div class="stat-num" data-target="1" data-suffix="+">0+</div>
+                  <div class="stat-lbl">Year Learning Analytics</div>
+                </div>
+              </div>
+
+              <div class="about-stat-card">
+                <div class="about-stat-icon"><i class="fas fa-database"></i></div>
+                <div class="about-stat-info">
+                  <div class="stat-num" data-target="25" data-suffix="+">0+</div>
+                  <div class="stat-lbl">Datasets Analyzed</div>
+                </div>
+              </div>
+
+              <div class="about-stat-card">
+                <div class="about-stat-icon"><i class="fas fa-code"></i></div>
+                <div class="about-stat-info">
+                  <div class="stat-num" data-target="10" data-suffix="+">0+</div>
+                  <div class="stat-lbl">Web Frontend Projects</div>
+                </div>
+              </div>
+
+              <div class="about-stat-card">
+                <div class="about-stat-icon"><i class="fas fa-chart-pie"></i></div>
+                <div class="about-stat-info">
+                  <div class="stat-num" data-target="12" data-suffix="+">0+</div>
+                  <div class="stat-lbl">Dashboards Built</div>
+                </div>
+              </div>
+
+            </div><!-- /about-stats-grid -->
+
+            <!-- Intro paragraphs -->
+            <div class="about-intro-text">
+              <p><strong>Hello! I'm Shanib Khan</strong> — a Data Analyst and Frontend Web Developer with hands-on experience working on real-world datasets and building clean, responsive websites. I specialize in data cleaning, exploratory data analysis (EDA), building dashboards, and creating portfolio and static websites using HTML, CSS, and JavaScript.</p>
+              <p>My journey started with a strong interest in statistics and problem-solving. Over time, I developed practical skills in Python, MySQL, Excel, and Power BI for data analysis — and separately explored web development, building portfolio sites and static web pages that look great on any device.</p>
+              <p>I continuously improve both my analytical thinking and web skills by working on real projects, learning new tools, and exploring how data and design together can create better experiences.</p>
+            </div>
+
+          </div><!-- /about-right-col -->
+        </div><!-- /about-hero-block -->
+
+        <!-- ── Timeline (unchanged) ── -->
         <div class="about-content">
           <div class="about-text reveal-left">
-            <div class="about-profile-img reveal">
-              <img src="Screenshot 2026-05-17 214440.png" alt="Shanib Khan" onerror="this.style.display='none'">
-            </div>
-            <p>Hello! I'm Shanib Khan — a Data Analyst and Frontend Web Developer with hands-on experience working on real-world datasets and building clean, responsive websites. I specialize in data cleaning, exploratory data analysis (EDA), building dashboards, and creating portfolio and static websites using HTML, CSS, and JavaScript.</p>
-            <p>My journey started with a strong interest in statistics and problem-solving. Over time, I developed practical skills in Python, MySQL, Excel, and Power BI for data analysis — and separately explored web development, building portfolio sites and static web pages that look great on any device.</p>
-            <p>I continuously improve both my analytical thinking and web skills by working on real projects, learning new tools, and exploring how data and design together can create better experiences.</p>
-
-            <!-- Timeline -->
             <div class="timeline reveal">
               <div class="timeline-item">
                 <span class="year">2024 – Present</span>
@@ -69,7 +337,7 @@
                 <h4>Data Analytics Learning &amp; Projects</h4>
                 <p>Working on datasets, performing EDA, building dashboards, and strengthening statistical foundations.</p>
               </div>
-                     <div class="timeline-item">
+              <div class="timeline-item">
                 <span class="year">2024 – 2025</span>
                 <h4>Frontend Web Development</h4>
                 <p>Built responsive portfolio websites and static web pages using HTML, CSS, and JavaScript. Developed skills in UI layout, responsive design, and deploying clean web projects.</p>
@@ -93,49 +361,12 @@
               </a>
             </div>
           </div>
-
-          <div class="reveal-right">
-            <div class="stats stagger-children">
-              <div class="stat-card">
-                <div class="stat-card-inner">
-                  <div class="stat-card-front">
-                    <div class="stat-number" data-target="1" data-suffix="+">0+</div>
-                    <div class="stat-label">Year Learning Analytics</div>
-                  </div>
-                  <div class="stat-card-back">
-                    <p>Focused on data analysis, statistics, and visualization projects</p>
-                  </div>
-                </div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-card-inner">
-                  <div class="stat-card-front">
-                    <div class="stat-number" data-target="25" data-suffix="+">0+</div>
-                    <div class="stat-label">Datasets Analyzed</div>
-                  </div>
-                  <div class="stat-card-back">
-                    <p>Performed cleaning, transformation, and insight extraction</p>
-                  </div>
-                </div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-card-inner">
-                  <div class="stat-card-front">
-                    <div class="stat-number" data-target="12" data-suffix="+">0+</div>
-                    <div class="stat-label">Dashboards Built</div>
-                  </div>
-                  <div class="stat-card-back">
-                    <p>Created interactive reports using Power BI and Excel</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
+
       </div>
     </section>
 
-    <!-- Skills Preview -->
+    <!-- Skills Preview (unchanged) -->
     <section class="skills" id="skills">
       <div class="container">
         <h2 class="section-title reveal">My <span>Skills</span></h2>
@@ -230,14 +461,13 @@
       </div>
     </section>
 
-    <!-- Certifications -->
+    <!-- Certifications (unchanged) -->
     <section class="certs">
       <div class="container">
         <h2 class="section-title reveal">Certifications</h2>
         <p class="section-subtitle reveal">Industry-recognized credentials</p>
         <div class="cert-grid stagger-children reveal">
           
-          <!-- Certificate 1: Deloitte Data Analytics -->
           <a href="https://drive.google.com/file/d/1IJUpHRxk4iqYg6QlByEM1owwYtz-3P2t/view?usp=drive_link" target="_blank" class="cert-card cert-link">
             <div class="cert-icon"><i class="fas fa-award"></i></div>
             <div>
@@ -247,7 +477,6 @@
             <i class="fas fa-external-link-alt cert-view-icon"></i>
           </a>
 
-          <!-- Certificate 2: MS Excel Upskilling -->
           <a href="https://drive.google.com/file/d/1PyhYeeKLr-QdFySlGSV5ra-wHFZvj5ms/view?usp=drive_link" target="_blank" class="cert-card cert-link">
             <div class="cert-icon"><i class="fas fa-table"></i></div>
             <div>
@@ -257,7 +486,6 @@
             <i class="fas fa-external-link-alt cert-view-icon"></i>
           </a>
 
-          <!-- Certificate 3: Tata Data Visualisation -->
           <a href="https://drive.google.com/file/d/1Hfg7wth5e6pNMDe7_AEWmWdzjWmxS4aQ/view?usp=drive_link" target="_blank" class="cert-card cert-link">
             <div class="cert-icon"><i class="fas fa-chart-pie"></i></div>
             <div>
@@ -267,7 +495,6 @@
             <i class="fas fa-external-link-alt cert-view-icon"></i>
           </a>
 
-          <!-- Certificate 4: Certificate and Content Writing Internship -->
           <a href="https://drive.google.com/file/d/1LnUvEPueXhjDKCNolCxnBD5HOckybWew/view?usp=drive_link" target="_blank" class="cert-card cert-link">
             <div class="cert-icon"><i class="fas fa-pen-fancy"></i></div>
             <div>
@@ -277,7 +504,6 @@
             <i class="fas fa-external-link-alt cert-view-icon"></i>
           </a>
 
-          <!-- Certificate 5: Tata Data Analytics -->
           <a href="https://drive.google.com/file/d/1ezwYnypDwt7KoS97dpbClq883Oz2ZkQr/view?usp=drive_link" target="_blank" class="cert-card cert-link">
             <div class="cert-icon"><i class="fas fa-certificate"></i></div>
             <div>
@@ -287,7 +513,6 @@
             <i class="fas fa-external-link-alt cert-view-icon"></i>
           </a>
 
-          <!-- Certificate 6: BCG Data Science -->
           <a href="https://drive.google.com/drive/folders/1dKXII0AVswsuyQ25zjXa6Bq4LYchHZ8L?usp=drive_link" target="_blank" class="cert-card cert-link">
             <div class="cert-icon"><i class="fas fa-brain"></i></div>
             <div>
@@ -318,5 +543,72 @@
   </footer>
 
   <script src="js/main.js"></script>
+
+  <!-- ═══════════════════════════════════════════════════
+       OVERRIDE JS — Counter animation for new stat cards
+  ═══════════════════════════════════════════════════ -->
+  <script>
+    (function () {
+      /**
+       * Animates a number from 0 → target with easing.
+       * Works on elements with [data-target] and [data-suffix].
+       */
+      function animateCounter(el) {
+        const target = parseInt(el.dataset.target, 10);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1800; // ms
+        const startTime = performance.now();
+
+        function easeOutQuart(t) {
+          return 1 - Math.pow(1 - t, 4);
+        }
+
+        function step(now) {
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const current = Math.floor(easeOutQuart(progress) * target);
+          el.textContent = current + suffix;
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            el.textContent = target + suffix;
+          }
+        }
+
+        requestAnimationFrame(step);
+      }
+
+      /**
+       * Kick off counters when the stat cards enter the viewport.
+       * Uses IntersectionObserver so it fires on scroll-in.
+       */
+      function initCounters() {
+        const statNums = document.querySelectorAll('.about-stat-info .stat-num[data-target]');
+        if (!statNums.length) return;
+
+        const observer = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.4 }
+        );
+
+        statNums.forEach(el => observer.observe(el));
+      }
+
+      // Run after DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCounters);
+      } else {
+        initCounters();
+      }
+    })();
+  </script>
+
 </body>
 </html>
