@@ -187,7 +187,7 @@ document.querySelectorAll('a, button, .project-card, .stat-card, .skill-card, .c
 (function initTyped() {
   const el = document.querySelector('.typed-text');
   if (!el) return;
-  const words = ['Data Analyst', 'Python Developer', 'BI Dashboard Builder', 'SQL Expert'];
+  const words = ['Data Analyst', 'Python Developer', 'Power BI Dashboard Builder', 'SQL Expert', 'Web Developer'];
   let wi = 0, ci = 0, deleting = false;
 
   function type() {
